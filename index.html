@@ -340,14 +340,18 @@ hero.from('#capaImg',{opacity:0,duration:1.6,ease:'power2.out'})
   Promise.all([pi,pf]).then(go); setTimeout(go,2500);
 })();
 
-// vídeos: carregam e tocam só quando entram na tela
+// vídeos: baixam com antecedência (bem antes de chegar na seção) e só tocam quando aparecem na tela
 (function(){
-  const vs=document.querySelectorAll('video[data-src]');
-  if(!('IntersectionObserver' in window)){vs.forEach(v=>{v.src=v.dataset.src;v.play().catch(()=>{})});return;}
-  const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;
-    if(e.isIntersecting){ if(!v.src){v.src=v.dataset.src;} v.play().catch(()=>{}); } else if(v.src){ v.pause(); }
-  }),{rootMargin:'200px 0px'});
-  vs.forEach(v=>io.observe(v));
+  const vs=[...document.querySelectorAll('video[data-src]')];
+  const carrega=v=>{if(!v.src){v.preload='auto';v.src=v.dataset.src;v.load();}};
+  if(!('IntersectionObserver' in window)){vs.forEach(v=>{carrega(v);v.play().catch(()=>{})});return;}
+  const perto=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){carrega(e.target);perto.unobserve(e.target);}}),{rootMargin:'1600px 0px'});
+  const tela=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;
+    if(e.isIntersecting){carrega(v);v.play().catch(()=>{});} else if(v.src){v.pause();}
+  }),{rootMargin:'100px 0px'});
+  vs.forEach(v=>{perto.observe(v);tela.observe(v);});
+  // depois que a página termina de abrir, já deixa os vídeos baixando em segundo plano
+  window.addEventListener('load',()=>setTimeout(()=>vs.forEach(carrega),1200));
 })();
 window.addEventListener('load',()=>ScrollTrigger.refresh());
 
