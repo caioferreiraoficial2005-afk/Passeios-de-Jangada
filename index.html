@@ -1,11 +1,17 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="pre">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Passeios de Jangada Maceió · Piscinas naturais de Pajuçara</title>
 <meta name="description" content="Passeios de jangada diários nas piscinas naturais de Pajuçara, em Maceió: de dia, no pôr do sol e no banho de lua.">
+<link rel="preload" as="image" href="assets/00-capa.webp" media="(min-width:901px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/00-capa-m.webp" media="(max-width:900px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/yeseva.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-700.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-600.woff2" crossorigin>
 <style>
+html.pre .capa-t,html.pre .pino,html.pre #capaImg{opacity:0}
 @font-face{font-family:"YS";src:url(assets/fonts/yeseva.woff2) format("woff2");font-display:swap}
 @font-face{font-family:"MT";src:url(assets/fonts/montserrat-400.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"MT";src:url(assets/fonts/montserrat-500.woff2) format("woff2");font-weight:500;font-display:swap}
@@ -22,11 +28,13 @@ a{color:inherit;text-decoration:none}
 .btn:hover{background:#b9253f}
 .btn svg{width:16px;height:16px;fill:#fff}
 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
-.wi{display:inline-block;will-change:transform}
+.wi{display:inline-block;will-change:transform,opacity;backface-visibility:hidden}
+.capa-img{will-change:opacity}
+#reservar{will-change:clip-path}
 
 /* MENU */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:26px clamp(20px,3vw,44px);color:#fff;transition:background .4s,padding .4s,color .4s}
-nav.solid{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--tinta);padding-block:14px;box-shadow:0 1px 0 var(--linha)}
+nav.solid{background:rgba(255,255,255,.97);color:var(--tinta);padding-block:14px;box-shadow:0 1px 0 var(--linha)}
 .nl{display:flex;align-items:center;gap:clamp(22px,4.4vw,74px);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 .nl.r{justify-content:flex-end}
 .nl a{opacity:.95}
@@ -50,7 +58,7 @@ nav.solid{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-ba
 .capa-t{position:absolute;z-index:3;left:0;right:0;top:13.2vw;text-align:center;color:#fff}
 .sobre-t{display:flex;align-items:center;justify-content:center;gap:16px;font-size:clamp(10px,.95vw,14px);font-weight:600;letter-spacing:.2em;text-transform:uppercase}
 .sobre-t::before,.sobre-t::after{content:"";width:clamp(30px,7vw,110px);height:1px;background:rgba(255,255,255,.75)}
-.capa h1{font-size:7.4vw;line-height:1;margin-top:.5vw;text-shadow:0 4px 40px rgba(4,30,50,.35)}
+.capa h1{font-size:7.4vw;line-height:1;margin-top:.5vw}
 
 /* títulos de seção com número atrás */
 .tit{position:relative;text-align:center;padding:0 20px}
@@ -201,13 +209,13 @@ footer .c{text-align:center}footer .d{text-align:right}
 
 <nav id="nav">
   <div class="nl"><span class="lang"><b>PT</b> | EN</span><a href="#porque">Sobre</a><a href="#veja">Vídeos</a><a href="#destinos">Passeios</a></div>
-  <a class="logo cl" href="#topo"><img src="assets/logo.jpg" alt="Passeios de Jangada Maceió"><span class="lt"><b>Passeios de Jangada</b><small>MACEIÓ · PAJUÇARA</small></span></a>
+  <a class="logo cl" href="#topo"><img decoding="async" src="assets/logo.webp" alt="Passeios de Jangada Maceió"><span class="lt"><b>Passeios de Jangada</b><small>MACEIÓ · PAJUÇARA</small></span></a>
   <div class="nl r"><a href="#reservar">Reservar</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a></div>
 </nav>
 
 <!-- CAPA -->
 <header class="capa" id="topo">
-  <picture><source media="(max-width:900px)" srcset="assets/00-capa-m.jpg"><img class="capa-img" id="capaImg" src="assets/00-capa.jpg" alt="Jangada nas piscinas naturais de Pajuçara, vista de cima"></picture>
+  <picture><source media="(max-width:900px)" srcset="assets/00-capa-m.webp"><img fetchpriority="high" decoding="async" class="capa-img" id="capaImg" src="assets/00-capa.webp" alt="Jangada nas piscinas naturais de Pajuçara, vista de cima"></picture>
   <div class="pino fade"><i></i><u></u><a class="btn" href="#destinos">Ver os passeios</a></div>
   <div class="capa-t">
     <div class="sobre-t fade">Piscinas naturais de Pajuçara · passeios diários</div>
@@ -219,9 +227,9 @@ footer .c{text-align:center}footer .d{text-align:right}
 <section class="pq" id="porque">
   <div class="tit"><span class="n">01</span><h2 class="split">Por que ir com a gente?</h2></div>
   <div class="cards">
-    <article class="card fade"><img src="assets/f1.jpg" alt="" style="object-position:50% 40%"><div><h3>Jangada de verdade</h3><p>Você sai da praia de Pajuçara numa jangada a vela, do jeito que Maceió sempre fez, até as piscinas naturais.</p></div></article>
-    <article class="card fade"><img src="assets/c-peixes.jpg" alt=""><div><h3>Nade com os peixes</h3><p>A primeira parada é no Aquário dos Peixes. Dá pra mergulhar de máscara e alimentar os peixes coloridos.</p></div></article>
-    <article class="card fade"><img src="assets/f2.jpg" alt="" style="object-position:50% 46%"><div><h3>O Ewerton cuida de tudo</h3><p>Nota 5,0 no Google. Quem vai sempre elogia a atenção e o cuidado do jangadeiro com cada pessoa.</p></div></article>
+    <article class="card fade"><img loading="lazy" decoding="async" src="assets/f1.webp" alt="" style="object-position:50% 40%"><div><h3>Jangada de verdade</h3><p>Você sai da praia de Pajuçara numa jangada a vela, do jeito que Maceió sempre fez, até as piscinas naturais.</p></div></article>
+    <article class="card fade"><img loading="lazy" decoding="async" src="assets/c-peixes.webp" alt=""><div><h3>Nade com os peixes</h3><p>A primeira parada é no Aquário dos Peixes. Dá pra mergulhar de máscara e alimentar os peixes coloridos.</p></div></article>
+    <article class="card fade"><img loading="lazy" decoding="async" src="assets/f2.webp" alt="" style="object-position:50% 46%"><div><h3>O Ewerton cuida de tudo</h3><p>Nota 5,0 no Google. Quem vai sempre elogia a atenção e o cuidado do jangadeiro com cada pessoa.</p></div></article>
   </div>
 </section>
 
@@ -229,25 +237,25 @@ footer .c{text-align:center}footer .d{text-align:right}
 <section class="veja" id="veja">
   <div class="tit"><span class="n">02</span><h2 class="split">Veja como é o passeio</h2></div>
   <div class="telas">
-    <div class="tela fade"><video src="assets/v4.mp4" poster="assets/v4-capa.jpg" data-seq="v4" data-n="111" autoplay muted loop playsinline></video><span>A caminho das piscinas</span></div>
-    <div class="tela fade"><video src="assets/v2.mp4" poster="assets/v2-capa.jpg" data-seq="v2" autoplay muted loop playsinline></video><span>As piscinas naturais, de cima</span></div>
-    <div class="tela fade"><video src="assets/v3.mp4" poster="assets/v3-capa.jpg" data-seq="v3" autoplay muted loop playsinline></video><span>A saída, na praia de Pajuçara</span></div>
-    <div class="tela fade"><video src="assets/v1.mp4" poster="assets/v1-capa.jpg" data-seq="v1" autoplay muted loop playsinline></video><span>A bordo, com a vela aberta</span></div>
+    <div class="tela fade"><video data-src="assets/v4.mp4" poster="assets/v4-capa.webp" data-seq="v4" data-n="111" preload="none" muted loop playsinline></video><span>A caminho das piscinas</span></div>
+    <div class="tela fade"><video data-src="assets/v2.mp4" poster="assets/v2-capa.webp" data-seq="v2" preload="none" muted loop playsinline></video><span>As piscinas naturais, de cima</span></div>
+    <div class="tela fade"><video data-src="assets/v3.mp4" poster="assets/v3-capa.webp" data-seq="v3" preload="none" muted loop playsinline></video><span>A saída, na praia de Pajuçara</span></div>
+    <div class="tela fade"><video data-src="assets/v1.mp4" poster="assets/v1-capa.webp" data-seq="v1" preload="none" muted loop playsinline></video><span>A bordo, com a vela aberta</span></div>
   </div>
 </section>
 
 <!-- 02 -->
 <section id="destinos">
   <div class="tit dest-t"><span class="n">03</span><h2 class="split">Escolha o seu passeio</h2></div>
-  <div class="painel"><img src="assets/jangada.jpg" alt="Passeio de jangada de dia" style="object-position:55% 50%">
+  <div class="painel"><img loading="lazy" decoding="async" src="assets/jangada.webp" alt="Passeio de jangada de dia" style="object-position:55% 50%">
     <div><small>De dia · piscinas naturais de Pajuçara</small><h3>Passeio diurno</h3><p>Duas paradas pra banho: o Aquário dos Peixes e a piscina natural dos bares flutuantes.</p><p class="tb">Também tem saída no pôr do sol</p><span class="preco">R$ 70 POR PESSOA</span><br><a class="btn" href="https://wa.me/5582988288961"><svg><use href="#wa"/></svg>Reservar o passeio diurno</a></div></div>
-  <div class="painel"><img src="assets/noite.jpg" alt="Banho de lua nas piscinas naturais" style="object-position:50% 50%">
+  <div class="painel"><img loading="lazy" decoding="async" src="assets/noite.webp" alt="Banho de lua nas piscinas naturais" style="object-position:50% 50%">
     <div><small>À noite · cerca de 2h30</small><h3>Banho de lua</h3><p>Noite de luar nas piscinas naturais, com música o passeio todo. Pode levar a sua bebida.</p><span class="preco">R$ 90 POR PESSOA</span><br><a class="btn" href="https://wa.me/5582988288961"><svg><use href="#wa"/></svg>Reservar o banho de lua</a></div></div>
 </section>
 
 <!-- 03 -->
 <section class="res" id="reservar">
-  <img class="res-img" src="assets/drone-baixo.jpg" alt="Jangadas nas piscinas naturais, vistas de cima" style="object-position:50% 50%">
+  <img loading="lazy" decoding="async" class="res-img" src="assets/drone-baixo.webp" alt="Jangadas nas piscinas naturais, vistas de cima" style="object-position:50% 50%">
   <div class="res-t">
     <span class="k fade">Como reservar</span>
     <h2 class="split">Você resolve em dois minutos</h2>
@@ -264,7 +272,7 @@ footer .c{text-align:center}footer .d{text-align:right}
 <section class="aval" id="avaliacoes">
   <div class="tit"><span class="n">04</span><h2 class="split">Quem já foi com a gente</h2></div>
   <div class="nota fade"><svg><use href="#g"/></svg><b>5,0</b><span><span class="est">★★★★★</span>36 avaliações no Google</span></div>
-  <div class="gente"><img class="fade" src="assets/c-grupo.jpg" alt=""><img class="fade" src="assets/c-peixes.jpg" alt="" style="object-position:0% 100%"><img class="fade" src="assets/c-banho.jpg" alt="" style="object-position:40% 60%"><img class="fade" src="assets/c-lua.jpg" alt="" style="object-position:50% 100%"></div>
+  <div class="gente"><img loading="lazy" decoding="async" class="fade" src="assets/c-grupo.webp" alt=""><img loading="lazy" decoding="async" class="fade" src="assets/c-peixes.webp" alt="" style="object-position:0% 100%"><img loading="lazy" decoding="async" class="fade" src="assets/c-banho.webp" alt="" style="object-position:40% 60%"><img loading="lazy" decoding="async" class="fade" src="assets/c-lua.webp" alt="" style="object-position:50% 100%"></div>
   <div class="deps">
     <article class="dep fade"><div class="dep-top"><span class="av" style="background:#2b7bb9">G</span><span><b>Gustavo S.</b><small>há 6 dias</small></span><svg><use href="#g"/></svg></div><span class="est">★★★★★</span><p>Passeio maravilhoso às piscinas naturais de Pajuçara! O jangadeiro Ewerton é excelente, atencioso e prestativo.</p></article>
     <article class="dep fade"><div class="dep-top"><span class="av" style="background:#d8344f">I</span><span><b>Isabela B.</b><small>há 2 meses</small></span><svg><use href="#g"/></svg></div><span class="est">★★★★★</span><p>Fácil acesso às piscinas naturais. Nado com os peixes. O barqueiro Ewerton é nota 10! Muito atencioso e prestativo.</p></article>
@@ -274,7 +282,7 @@ footer .c{text-align:center}footer .d{text-align:right}
 
 <!-- FINAL -->
 <section class="final" id="contato">
-  <img class="final-img" src="assets/f1.jpg" alt="A bordo da jangada" style="object-position:50% 34%">
+  <img loading="lazy" decoding="async" class="final-img" src="assets/f1.webp" alt="A bordo da jangada" style="object-position:50% 34%">
   <div class="final-t">
     <span class="k fade">Alta temporada</span>
     <h2 class="split">Fim de ano em Maceió?</h2>
@@ -282,7 +290,7 @@ footer .c{text-align:center}footer .d{text-align:right}
     <a class="btn fade" href="https://wa.me/5582988288961"><svg><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
   </div>
   <footer>
-    <div><a class="logo cl" href="#topo" style="margin-bottom:14px"><img src="assets/logo.jpg" alt="Passeios de Jangada Maceió"><span class="lt"><b>Passeios de Jangada</b><small>MACEIÓ · PAJUÇARA</small></span></a><p>Passeios de jangada diários nas piscinas naturais de Pajuçara. De dia, no pôr do sol e no banho de lua.</p></div>
+    <div><a class="logo cl" href="#topo" style="margin-bottom:14px"><img loading="lazy" decoding="async" src="assets/logo.webp" alt="Passeios de Jangada Maceió"><span class="lt"><b>Passeios de Jangada</b><small>MACEIÓ · PAJUÇARA</small></span></a><p>Passeios de jangada diários nas piscinas naturais de Pajuçara. De dia, no pôr do sol e no banho de lua.</p></div>
     <div class="c"><h4>Fale com a gente</h4><p>WhatsApp (82) 98828-8961<br>Instagram @passeio_de_jangada_maceio</p></div>
     <div class="d"><h4>Onde a gente sai</h4><p>Praia de Pajuçara, Maceió<br>Em frente ao nº 1037 da<br>Av. Dr. Antônio Gouveia</p></div>
   </footer>
@@ -300,7 +308,7 @@ let lenis;
 if(!REC && window.Lenis){
   lenis = new Lenis({lerp:.09});
   lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add(t=>lenis.raf(t*1000)); gsap.ticker.lagSmoothing(0);
+  gsap.ticker.add(t=>lenis.raf(t*1000)); gsap.ticker.lagSmoothing(500,33);
   document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lenis.scrollTo(a.getAttribute('href'))}));
 }
 if(REC){
@@ -318,12 +326,30 @@ document.querySelectorAll('.split').forEach(el=>{
   el.textContent='';el.appendChild(f);
 });
 
-// CAPA: entrada
-const hero=gsap.timeline({delay:.2});
+// CAPA: entrada (só começa com a foto e as fontes prontas, pra não engasgar)
+const hero=gsap.timeline({paused:true});
 window.__hero=hero;
-hero.from('#capaImg',{opacity:0,duration:1.8,ease:'power2.out'})
-    .from('.capa .wi',{yPercent:100,opacity:0,rotate:2.5,duration:1.6,ease:'power4.out',stagger:.12},.5)
-    .from('.capa .fade',{opacity:0,duration:1.5,ease:'power2.out',stagger:.25},1.0);
+hero.from('#capaImg',{opacity:0,duration:1.6,ease:'power2.out'})
+    .from('.capa .wi',{yPercent:100,opacity:0,rotate:2.5,duration:1.5,ease:'power4.out',stagger:.12,force3D:true},.35)
+    .from('.capa .fade',{opacity:0,duration:1.3,ease:'power2.out',stagger:.2},.85);
+(function(){
+  const img=document.getElementById('capaImg'); let ok=false;
+  const go=()=>{ if(ok) return; ok=true; document.documentElement.classList.remove('pre'); requestAnimationFrame(()=>requestAnimationFrame(()=>hero.play())); };
+  const pi=(img.decode?img.decode():Promise.resolve()).catch(()=>{});
+  const pf=(document.fonts&&document.fonts.ready)||Promise.resolve();
+  Promise.all([pi,pf]).then(go); setTimeout(go,2500);
+})();
+
+// vídeos: carregam e tocam só quando entram na tela
+(function(){
+  const vs=document.querySelectorAll('video[data-src]');
+  if(!('IntersectionObserver' in window)){vs.forEach(v=>{v.src=v.dataset.src;v.play().catch(()=>{})});return;}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;
+    if(e.isIntersecting){ if(!v.src){v.src=v.dataset.src;} v.play().catch(()=>{}); } else if(v.src){ v.pause(); }
+  }),{rootMargin:'200px 0px'});
+  vs.forEach(v=>io.observe(v));
+})();
+window.addEventListener('load',()=>ScrollTrigger.refresh());
 
 // textos
 document.querySelectorAll('.split').forEach(el=>{
