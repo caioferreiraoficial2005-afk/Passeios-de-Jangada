@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Passeios de Jangada Maceió · Piscinas naturais de Pajuçara</title>
+<meta name="description" content="Passeios de jangada diários nas piscinas naturais de Pajuçara, em Maceió: de dia, no pôr do sol e no banho de lua.">
+<style>
+@font-face{font-family:"YS";src:url(assets/fonts/yeseva.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"MT";src:url(assets/fonts/montserrat-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"MT";src:url(assets/fonts/montserrat-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"MT";src:url(assets/fonts/montserrat-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"MT";src:url(assets/fonts/montserrat-700.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{--azul:#2b7bb9;--fundo:#0b3550;--verm:#d8344f;--bg:#f1f0ee;--tinta:#22292e;--muted:#6b7379;--rod:#283137;--linha:rgba(34,41,46,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{font-family:"MT",system-ui,sans-serif;color:var(--tinta);background:var(--bg);font-size:15px;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.ys{font-family:"YS",serif;font-weight:400;letter-spacing:.01em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--verm);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:17px 30px;border-radius:0;transition:background .3s}
+.btn:hover{background:#b9253f}
+.btn svg{width:16px;height:16px;fill:#fff}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.wi{display:inline-block;will-change:transform}
+
+/* MENU */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:26px clamp(20px,3vw,44px);color:#fff;transition:background .4s,padding .4s,color .4s}
+nav.solid{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--tinta);padding-block:14px;box-shadow:0 1px 0 var(--linha)}
+.nl{display:flex;align-items:center;gap:clamp(22px,4.4vw,74px);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.nl.r{justify-content:flex-end}
+.nl a{opacity:.95}
+.lang{font-size:10px;letter-spacing:.1em;margin-right:auto}
+.lang b{color:#58c0f2}
+.logo{display:flex;flex-direction:column;align-items:flex-end;line-height:1;padding:0 clamp(20px,4vw,60px)}
+.logo span{display:flex;align-items:center;gap:8px;font-weight:600;font-size:27px;letter-spacing:.01em}
+.logo span i{width:17px;height:17px;border-radius:50%;background:conic-gradient(from 210deg,#58c0f2,#1c7fc4,#58c0f2);display:block;position:relative}
+.logo span i::after{content:"";position:absolute;inset:4px 4px 5px 5px;border-radius:50%;background:#fff;opacity:.9}
+.logo small{font-size:9.5px;font-weight:600;letter-spacing:.2em;color:#58c0f2;margin-top:3px}
+
+/* CAPA */
+.capa{position:relative;height:112.5vw;overflow:hidden;background:var(--fundo)}
+.capa-img{position:absolute;left:0;top:-3.5vw;width:100%;height:133.33vw;object-fit:cover}
+.capa::before{content:"";position:absolute;inset:0 0 auto 0;height:34vw;z-index:1;background:linear-gradient(180deg,rgba(4,40,58,.7),rgba(4,40,58,.45) 55%,rgba(4,40,58,0))}
+.capa::after{content:"";position:absolute;left:0;right:0;bottom:0;height:27%;z-index:1;background:linear-gradient(180deg,rgba(241,240,238,0),var(--bg))}
+.pino{position:absolute;left:72.6%;top:39.6vw;z-index:3;display:flex;align-items:center}
+.pino i{width:9px;height:9px;background:#fff;border:2px solid rgba(255,255,255,.5);background-clip:padding-box;box-sizing:content-box}
+.pino u{display:block;width:clamp(40px,5vw,80px);height:1px;background:rgba(255,255,255,.7)}
+.pino .btn{padding:12px 22px;font-size:10px}
+.capa-t{position:absolute;z-index:3;left:0;right:0;top:13.2vw;text-align:center;color:#fff}
+.sobre-t{display:flex;align-items:center;justify-content:center;gap:16px;font-size:clamp(10px,.95vw,14px);font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.sobre-t::before,.sobre-t::after{content:"";width:clamp(30px,7vw,110px);height:1px;background:rgba(255,255,255,.75)}
+.capa h1{font-size:7.4vw;line-height:1;margin-top:.5vw;text-shadow:0 4px 40px rgba(4,30,50,.35)}
+
+/* títulos de seção com número atrás */
+.tit{position:relative;text-align:center;padding:0 20px}
+.tit .n{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);font-family:"YS",serif;font-size:clamp(110px,12.5vw,190px);line-height:1;color:rgba(34,41,46,.055);pointer-events:none;user-select:none}
+.tit h2{position:relative;font-family:"YS",serif;font-weight:400;font-size:clamp(32px,3.5vw,54px);line-height:1.15;color:var(--azul)}
+.tit p{position:relative;margin-top:14px;color:var(--muted);max-width:46ch;margin-inline:auto}
+
+/* 01 POR QUE */
+.pq{position:relative;z-index:4;margin-top:-11vw;padding-bottom:clamp(90px,10vw,150px)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3.6vw,54px);max-width:1320px;margin:clamp(60px,7vw,110px) auto 0;padding:0 24px}
+.card{background:#fff;box-shadow:0 14px 44px rgba(20,40,60,.09);text-align:center}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.card div{padding:26px 22px 30px}
+.card h3{font-size:13.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.6}
+
+/* 02 DESTINOS */
+.dest-t{padding:clamp(40px,5vw,80px) 0 clamp(70px,7vw,110px)}
+.painel{position:sticky;top:0;height:92vh;height:92svh;min-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:var(--fundo)}
+.painel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.painel::after{content:"";position:absolute;inset:0;background:rgba(6,34,52,.4)}
+.painel>div{position:relative;z-index:2;padding:0 24px;max-width:760px}
+.painel small{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.painel h3{font-family:"YS",serif;font-weight:400;font-size:clamp(40px,5vw,78px);line-height:1.1;margin:10px 0 12px;text-shadow:0 4px 30px rgba(4,30,50,.4)}
+.painel p{font-size:16px;font-weight:500;max-width:40ch;margin:0 auto 28px;text-shadow:0 2px 14px rgba(4,30,50,.5)}
+.cont{position:absolute;z-index:2;bottom:34px;left:0;right:0;display:flex;justify-content:center;gap:14px}
+.cont i{width:7px;height:7px;background:rgba(255,255,255,.55)}
+.cont i.on{background:var(--verm)}
+
+/* 03 COMO RESERVAR */
+.res{position:relative;z-index:6;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--fundo);color:#fff;padding:clamp(100px,12vh,150px) clamp(22px,7vw,110px)}
+.res-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:80% 50%}
+.res::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,36,54,.93) 0%,rgba(8,36,54,.72) 34%,rgba(8,36,54,0) 60%)}
+.res-t{position:relative;z-index:2;max-width:500px}
+.res-t .k{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#7fd0f5}
+.res-t h2{font-family:"YS",serif;font-weight:400;font-size:clamp(36px,4.2vw,64px);line-height:1.1;margin:14px 0 30px}
+.passos{list-style:none;margin-bottom:36px}
+.passos li{display:grid;grid-template-columns:54px 1fr;align-items:baseline;padding:18px 0;border-top:1px solid rgba(255,255,255,.22)}
+.passos li:last-child{border-bottom:1px solid rgba(255,255,255,.22)}
+.passos b{font-family:"YS",serif;font-weight:400;font-size:22px;color:#7fd0f5}
+.passos span{font-size:16px;font-weight:500}
+.passos em{display:block;font-style:normal;font-size:13.5px;font-weight:400;opacity:.75;margin-top:2px}
+
+/* 04 AVALIAÇÕES */
+.aval{position:relative;z-index:6;background:var(--bg);padding:clamp(100px,11vw,170px) 24px clamp(90px,9vw,140px)}
+.nota{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:26px;position:relative;color:var(--muted);font-size:13.5px}
+.nota svg{width:38px;height:38px}
+.nota b{font-family:"YS",serif;font-weight:400;font-size:40px;color:var(--tinta);line-height:1}
+.est{color:#F5B301;letter-spacing:2px;font-size:17px;display:block;line-height:1.2}
+.deps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,34px);max-width:1120px;margin:clamp(50px,5vw,80px) auto 0}
+.dep{background:#fff;box-shadow:0 14px 44px rgba(20,40,60,.08);padding:30px 28px}
+.dep-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:15px}
+.dep-top b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.dep-top small{font-size:12px;color:var(--muted)}
+.dep-top svg{margin-left:auto;width:22px;height:22px}
+.dep p{font-size:14.5px;margin-top:10px}
+
+/* 05 PASSEIOS */
+.pas{position:relative;z-index:6;background:#fafafa;padding:clamp(90px,10vw,160px) 24px clamp(100px,10vw,160px)}
+.faixas{max-width:1000px;margin:clamp(60px,6vw,96px) auto 0;display:grid;gap:26px}
+.faixa{position:relative;height:clamp(190px,17vw,250px);overflow:hidden;display:flex;align-items:center;justify-content:flex-start;padding-left:11%;color:#fff;background:var(--fundo)}
+.faixa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.faixa::after{content:"";position:absolute;inset:0;background:rgba(6,34,52,.22);transition:background .4s}
+.faixa:hover::after{background:rgba(6,34,52,.4)}
+.faixa .mk{position:relative;z-index:2;text-align:right;line-height:1}
+.faixa .mk b{display:block;font-weight:600;font-size:clamp(30px,3.4vw,48px);text-shadow:0 3px 24px rgba(4,30,50,.5)}
+.faixa .mk small{font-size:clamp(11px,1.1vw,15px);font-weight:700;letter-spacing:.16em}
+.faixa:nth-child(1) .mk small{color:#ffd24a}.faixa:nth-child(2) .mk small{color:#ff5a72}
+.faixa .ir{position:absolute;z-index:2;right:20px;bottom:16px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* FINAL + RODAPÉ */
+.final{position:relative;z-index:6;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:var(--rod);color:#fff}
+.final-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.final::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,var(--rod) 16%,rgba(40,49,55,0) 46%),rgba(6,34,52,.38)}
+.final-t{position:relative;z-index:2;text-align:center;padding:clamp(120px,17vh,190px) 24px 40px}
+.final-t .k{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.final-t h2{font-family:"YS",serif;font-weight:400;font-size:clamp(38px,4.8vw,74px);line-height:1.1;margin:14px auto 16px;max-width:16ch;text-shadow:0 4px 30px rgba(10,20,30,.35)}
+.final-t p{font-size:16px;font-weight:500;max-width:42ch;margin:0 auto 30px;text-shadow:0 2px 14px rgba(10,20,30,.4)}
+footer{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;max-width:1000px;width:100%;margin:0 auto;padding:40px 24px 54px;font-size:13px;line-height:1.9;color:rgba(255,255,255,.82)}
+footer h4{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:12px}
+footer .logo{padding:0;margin-bottom:14px;color:#fff}
+footer .logo span{font-size:22px}
+footer .c{text-align:center}footer .d{text-align:right}
+
+.zap{position:fixed;right:26px;bottom:26px;z-index:60;width:56px;height:56px;background:#1f8fd6;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(10,40,70,.3)}
+.zap svg{width:28px;height:28px;fill:#fff}
+
+/* CELULAR */
+@media (max-width:900px){
+  nav{grid-template-columns:1fr;justify-items:center;padding:18px}
+  .nl{display:none}
+  .logo{padding:0}.logo span{font-size:24px}
+  .capa{height:205vw}
+  .capa-img{top:0;left:-20vw;width:140vw;max-width:none;height:auto;object-fit:fill}
+  .capa::before{height:72vw}
+  .pino{top:105.5vw;left:30%}
+  .pino u{width:26px}.pino .btn{padding:10px 14px;font-size:9px}
+  .capa-t{top:31vw}
+  .sobre-t{font-size:9.5px;letter-spacing:.14em;gap:10px}
+  .sobre-t::before,.sobre-t::after{width:22px}
+  .capa h1{font-size:12.2vw;margin-top:6px}
+  .tit h2{font-size:27px}
+  .pq{margin-top:-27vw}
+  .cards{grid-template-columns:1fr;max-width:420px;gap:22px;margin-top:70px}
+  .painel{height:86svh}
+  .painel p{font-size:15px}
+  .res{display:block;padding:0 0 70px;min-height:0;text-align:center}
+  .res-img{position:relative;height:52svh;object-position:76% 50%}
+  .res::before{background:linear-gradient(0deg,var(--fundo) 0%,rgba(11,53,80,0) 24%);height:52svh;bottom:auto}
+  .res-t{max-width:none;padding:0 22px;margin-top:-14px}
+  .passos{text-align:left}
+  .deps{grid-template-columns:1fr;max-width:440px}
+  .faixa{height:170px}
+  .final-t{padding-top:110px}
+  footer{grid-template-columns:1fr;text-align:center;gap:26px}
+  footer .logo{align-items:center}footer .d{text-align:center}
+  .zap{right:16px;bottom:16px;width:50px;height:50px}
+}
+.logo.cl{flex-direction:row;align-items:center;gap:11px}
+.logo.cl img{width:50px;height:50px;border-radius:50%;object-fit:cover}
+.logo.cl .lt{display:block;line-height:1.1;text-align:left}
+.logo.cl b{display:block;font-weight:700;font-size:16px;letter-spacing:.02em}
+.logo.cl small{margin-top:4px;display:block;font-size:8.5px}
+.card img{aspect-ratio:4/3.4}
+.gente{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,20px);max-width:1400px;margin:clamp(40px,4vw,64px) auto 0}
+.gente img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.painel .preco{display:inline-block;border:1px solid rgba(255,255,255,.7);padding:7px 14px;font-size:12px;font-weight:700;letter-spacing:.12em;margin-bottom:22px}
+@media (max-width:900px){.gente{grid-template-columns:repeat(2,1fr);max-width:440px}}
+.capa-b{margin-top:1.3vw}
+.capa-t{z-index:3}
+/* VEJA COMO É */
+.veja{position:relative;z-index:6;background:#fafafa;padding:clamp(80px,9vw,140px) 24px clamp(90px,9vw,150px)}
+.telas{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,30px);max-width:1280px;margin:clamp(50px,5vw,84px) auto 0}
+.tela{position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--fundo);box-shadow:0 18px 50px rgba(20,40,60,.16)}
+.tela video,.tela canvas,.tela img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tela span{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:40px 16px 16px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-align:center;background:linear-gradient(0deg,rgba(6,34,52,.75),rgba(6,34,52,0))}
+.painel .tb{font-size:13px;font-weight:600;opacity:.9;margin:-8px auto 22px}
+@media (max-width:900px){.capa-b{margin-top:18px}.telas{grid-template-columns:1fr;max-width:300px}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="g" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.300-.1-2.600-.4-3.900z"/><path fill="#FF3D00" d="M6.300 14.700l6.600 4.800C14.700 15.100 19 12 24 12c3.100 0 5.800 1.200 8 3l5.700-5.700C34 6.100 29.300 4 24 4 16.300 4 9.700 8.300 6.300 14.700z"/><path fill="#4CAF50" d="M24 44c5.200 0 9.900-2 13.400-5.200l-6.200-5.200c-2 1.500-4.500 2.400-7.200 2.400-5.200 0-9.600-3.300-11.300-7.900l-6.500 5C9.500 39.600 16.200 44 24 44z"/><path fill="#1976D2" d="M43.600 20.100H42V20H24v8h11.300c-.8 2.200-2.200 4.200-4.100 5.600l6.200 5.200C37 39.200 44 34 44 24c0-1.300-.1-2.600-.4-3.900z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.300 14.100c-.2.600-1.300 1.200-1.800 1.200s-1 .2-3.400-.7a11.800 11.800 0 0 1-4.600-4.100c-.5-.7-1.100-1.800-1.100-2.800s.5-1.600.8-1.900c.2-.2.4-.3.600-.3h.4c.2 0 .4 0 .6.500l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6a8.700 8.700 0 0 0 4.100 3.600c.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.900.9c.3.1.5.2.5.3.1.2.1.7-.1 1.400z"/></symbol>
+</defs></svg>
+
+<nav id="nav">
+  <div class="nl"><span class="lang"><b>PT</b> | EN</span><a href="#porque">Sobre</a><a href="#veja">Vídeos</a><a href="#destinos">Passeios</a></div>
+  <a class="logo cl" href="#topo"><img src="assets/logo.jpg" alt="Passeios de Jangada Maceió"><span class="lt"><b>Passeios de Jangada</b><small>MACEIÓ · PAJUÇARA</small></span></a>
+  <div class="nl r"><a href="#reservar">Reservar</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a></div>
+</nav>
+
+<!-- CAPA -->
+<header class="capa" id="topo">
+  <picture><source media="(max-width:900px)" srcset="assets/00-capa-m.jpg"><img class="capa-img" id="capaImg" src="assets/00-capa.jpg" alt="Jangada nas piscinas naturais de Pajuçara, vista de cima"></picture>
+  <div class="pino fade"><i></i><u></u><a class="btn" href="#destinos">Ver os passeios</a></div>
+  <div class="capa-t">
+    <div class="sobre-t fade">Piscinas naturais de Pajuçara · passeios diários</div>
+    <h1 class="ys split">Maceió de jangada</h1>
+  </div>
+</header>
+
+<!-- 01 -->
+<section class="pq" id="porque">
+  <div class="tit"><span class="n">01</span><h2 class="split">Por que ir com a gente?</h2></div>
+  <div class="cards">
+    <article class="card fade"><img src="assets/f1.jpg" alt="" style="object-position:50% 40%"><div><h3>Jangada de verdade</h3><p>Você sai da praia de Pajuçara numa jangada a vela, do jeito que Maceió sempre fez, até as piscinas naturais.</p></div></article>
+    <article class="card fade"><img src="assets/c-peixes.jpg" alt=""><div><h3>Nade com os peixes</h3><p>A primeira parada é no Aquário dos Peixes. Dá pra mergulhar de máscara e alimentar os peixes coloridos.</p></div></article>
+    <article class="card fade"><img src="assets/f2.jpg" alt="" style="object-position:50% 46%"><div><h3>O Ewerton cuida de tudo</h3><p>Nota 5,0 no Google. Quem vai sempre elogia a atenção e o cuidado do jangadeiro com cada pessoa.</p></div></article>
+  </div>
+</section>
+
+<!-- VEJA -->
+<section class="veja" id="veja">
+  <div class="tit"><span class="n">02</span><h2 class="split">Veja como é o passeio</h2></div>
+  <div class="telas">
+    <div class="tela fade"><video src="assets/v4.mp4" poster="assets/v4-capa.jpg" data-seq="v4" data-n="111" autoplay muted loop playsinline></video><span>A caminho das piscinas</span></div>
+    <div class="tela fade"><video src="assets/v2.mp4" poster="assets/v2-capa.jpg" data-seq="v2" autoplay muted loop playsinline></video><span>As piscinas naturais, de cima</span></div>
+    <div class="tela fade"><video src="assets/v3.mp4" poster="assets/v3-capa.jpg" data-seq="v3" autoplay muted loop playsinline></video><span>A saída, na praia de Pajuçara</span></div>
+    <div class="tela fade"><video src="assets/v1.mp4" poster="assets/v1-capa.jpg" data-seq="v1" autoplay muted loop playsinline></video><span>A bordo, com a vela aberta</span></div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="destinos">
+  <div class="tit dest-t"><span class="n">03</span><h2 class="split">Escolha o seu passeio</h2></div>
+  <div class="painel"><img src="assets/jangada.jpg" alt="Passeio de jangada de dia" style="object-position:55% 50%">
+    <div><small>De dia · piscinas naturais de Pajuçara</small><h3>Passeio diurno</h3><p>Duas paradas pra banho: o Aquário dos Peixes e a piscina natural dos bares flutuantes.</p><p class="tb">Também tem saída no pôr do sol</p><span class="preco">R$ 70 POR PESSOA</span><br><a class="btn" href="https://wa.me/5582988288961"><svg><use href="#wa"/></svg>Reservar o passeio diurno</a></div></div>
+  <div class="painel"><img src="assets/noite.jpg" alt="Banho de lua nas piscinas naturais" style="object-position:50% 50%">
+    <div><small>À noite · cerca de 2h30</small><h3>Banho de lua</h3><p>Noite de luar nas piscinas naturais, com música o passeio todo. Pode levar a sua bebida.</p><span class="preco">R$ 90 POR PESSOA</span><br><a class="btn" href="https://wa.me/5582988288961"><svg><use href="#wa"/></svg>Reservar o banho de lua</a></div></div>
+</section>
+
+<!-- 03 -->
+<section class="res" id="reservar">
+  <img class="res-img" src="assets/drone-baixo.jpg" alt="Jangadas nas piscinas naturais, vistas de cima" style="object-position:50% 50%">
+  <div class="res-t">
+    <span class="k fade">Como reservar</span>
+    <h2 class="split">Você resolve em dois minutos</h2>
+    <ul class="passos" id="passos">
+      <li><b>01</b><span>Chama no WhatsApp<em>Diz o dia e quantas pessoas vão.</em></span></li>
+      <li><b>02</b><span>A gente confirma o horário<em>De dia, no pôr do sol ou no banho de lua.</em></span></li>
+      <li><b>03</b><span>É só chegar em Pajuçara<em>Em frente ao nº 1037 da Av. Dr. Antônio Gouveia.</em></span></li>
+    </ul>
+    <a class="btn fade" href="https://wa.me/5582988288961"><svg><use href="#wa"/></svg>Reservar meu passeio</a>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="aval" id="avaliacoes">
+  <div class="tit"><span class="n">04</span><h2 class="split">Quem já foi com a gente</h2></div>
+  <div class="nota fade"><svg><use href="#g"/></svg><b>5,0</b><span><span class="est">★★★★★</span>36 avaliações no Google</span></div>
+  <div class="gente"><img class="fade" src="assets/c-grupo.jpg" alt=""><img class="fade" src="assets/c-peixes.jpg" alt="" style="object-position:0% 100%"><img class="fade" src="assets/c-banho.jpg" alt="" style="object-position:40% 60%"><img class="fade" src="assets/c-lua.jpg" alt="" style="object-position:50% 100%"></div>
+  <div class="deps">
+    <article class="dep fade"><div class="dep-top"><span class="av" style="background:#2b7bb9">G</span><span><b>Gustavo S.</b><small>há 6 dias</small></span><svg><use href="#g"/></svg></div><span class="est">★★★★★</span><p>Passeio maravilhoso às piscinas naturais de Pajuçara! O jangadeiro Ewerton é excelente, atencioso e prestativo.</p></article>
+    <article class="dep fade"><div class="dep-top"><span class="av" style="background:#d8344f">I</span><span><b>Isabela B.</b><small>há 2 meses</small></span><svg><use href="#g"/></svg></div><span class="est">★★★★★</span><p>Fácil acesso às piscinas naturais. Nado com os peixes. O barqueiro Ewerton é nota 10! Muito atencioso e prestativo.</p></article>
+    <article class="dep fade"><div class="dep-top"><span class="av" style="background:#0b3550">B</span><span><b>Bruna M.</b><small>há 1 semana</small></span><svg><use href="#g"/></svg></div><span class="est">★★★★★</span><p>Atenciosos e pontuais! O passeio das piscinas naturais vale muito a pena. É lindo!</p></article>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final" id="contato">
+  <img class="final-img" src="assets/f1.jpg" alt="A bordo da jangada" style="object-position:50% 34%">
+  <div class="final-t">
+    <span class="k fade">Alta temporada</span>
+    <h2 class="split">Fim de ano em Maceió?</h2>
+    <p class="fade">Dezembro e janeiro lotam rápido. Garanta o seu lugar na jangada antes de chegar.</p>
+    <a class="btn fade" href="https://wa.me/5582988288961"><svg><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+  </div>
+  <footer>
+    <div><a class="logo cl" href="#topo" style="margin-bottom:14px"><img src="assets/logo.jpg" alt="Passeios de Jangada Maceió"><span class="lt"><b>Passeios de Jangada</b><small>MACEIÓ · PAJUÇARA</small></span></a><p>Passeios de jangada diários nas piscinas naturais de Pajuçara. De dia, no pôr do sol e no banho de lua.</p></div>
+    <div class="c"><h4>Fale com a gente</h4><p>WhatsApp (82) 98828-8961<br>Instagram @passeio_de_jangada_maceio</p></div>
+    <div class="d"><h4>Onde a gente sai</h4><p>Praia de Pajuçara, Maceió<br>Em frente ao nº 1037 da<br>Av. Dr. Antônio Gouveia</p></div>
+  </footer>
+</section>
+
+<a class="zap" href="https://wa.me/5582988288961" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const REC = false;
+let lenis;
+if(!REC && window.Lenis){
+  lenis = new Lenis({lerp:.09});
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(t=>lenis.raf(t*1000)); gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lenis.scrollTo(a.getAttribute('href'))}));
+}
+if(REC){
+  gsap.ticker.lagSmoothing(0); gsap.ticker.sleep(); let t=0;
+  window.__step=()=>{t+=1/30; ScrollTrigger.update(); gsap.updateRoot(t);};
+}
+const nav=document.getElementById('nav');
+ScrollTrigger.create({start:0,onUpdate:s=>nav.classList.toggle('solid',s.scroll()>innerHeight*.6)});
+
+// títulos em palavras
+document.querySelectorAll('.split').forEach(el=>{
+  const f=document.createDocumentFragment();
+  el.textContent.split(/(\s+)/).forEach(p=>{if(!p)return;if(/^\s+$/.test(p)){f.appendChild(document.createTextNode(' '));return;}
+    const w=document.createElement('span');w.className='w';const i=document.createElement('span');i.className='wi';i.textContent=p;w.appendChild(i);f.appendChild(w);});
+  el.textContent='';el.appendChild(f);
+});
+
+// CAPA: entrada
+const hero=gsap.timeline({delay:.2});
+window.__hero=hero;
+hero.from('#capaImg',{opacity:0,duration:1.8,ease:'power2.out'})
+    .from('.capa .wi',{yPercent:100,opacity:0,rotate:2.5,duration:1.6,ease:'power4.out',stagger:.12},.5)
+    .from('.capa .fade',{opacity:0,duration:1.5,ease:'power2.out',stagger:.25},1.0);
+
+// textos
+document.querySelectorAll('.split').forEach(el=>{
+  if(el.closest('.capa')) return;
+  gsap.from(el.querySelectorAll('.wi'),{yPercent:100,opacity:0,rotate:2.5,duration:1.6,ease:'power4.out',stagger:.045,scrollTrigger:{trigger:el,start:'top 88%'}});
+});
+document.querySelectorAll('.fade').forEach(el=>{
+  if(el.closest('.capa')) return;
+  gsap.from(el,{opacity:0,y:22,duration:1.5,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%'}});
+});
+gsap.from('#passos li',{opacity:0,y:18,stagger:.14,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:'#passos',start:'top 85%'}});
+
+// DESTINOS: cada painel escurece enquanto o próximo sobe por cima
+gsap.utils.toArray('.painel').forEach((p,i,arr)=>{
+  gsap.from(p.querySelectorAll('small,h3,p,.btn'),{opacity:0,y:26,duration:1.3,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:p,start:'top 55%'}});
+});
+
+// COMO RESERVAR: abre como um cartão por cima dos destinos
+gsap.fromTo('#reservar',{clipPath:'inset(7% 6% 0% 6%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'none',scrollTrigger:{trigger:'#reservar',start:'top 95%',end:'top 25%',scrub:REC?true:1}});
+ScrollTrigger.refresh();
+</script>
+</body>
+</html>
